@@ -96,7 +96,7 @@ viewPager.setAdapter(adapter);
 
 SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
 Typeface tabsTypeface = Typeface.createFromAsset(this.getAssets(), "fonts/TheSans-Plain.otf");
-viewPagerTab.setIndicationTypeface(tabsTypeface);   // before setting the viewPager
+viewPagerTab.setIndicatorTypeface(tabsTypeface);   // before setting the viewPager
 viewPagerTab.setViewPager(viewPager);
 
 ```
