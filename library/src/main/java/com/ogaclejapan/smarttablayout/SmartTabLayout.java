@@ -83,6 +83,8 @@ public class SmartTabLayout extends HorizontalScrollView {
   private TabProvider tabProvider;
   private TabClickListener tabClickListener;
   private boolean distributeEvenly;
+  private Typeface mIndicatorTypeface;
+
 
   public SmartTabLayout(Context context) {
     this(context, null);
@@ -148,6 +150,7 @@ public class SmartTabLayout extends HorizontalScrollView {
     this.tabViewTextMinWidth = textMinWidth;
     this.tabClickListener = clickable ? new TabClickListener() : null;
     this.distributeEvenly = distributeEvenly;
+    mIndicatorTypeface = Typeface.create("sans-serif", Typeface.BOLD);
 
     if (customTabLayoutId != NO_ID) {
       setCustomTabView(customTabLayoutId, customTabTextViewId);
@@ -228,6 +231,14 @@ public class SmartTabLayout extends HorizontalScrollView {
     tabViewTextColors = ColorStateList.valueOf(color);
   }
 
+  /**
+   * Set the typeface of the tabs
+   * @param typeface
+   */
+  public void setIndicationTypeface(Typeface typeface) {
+    mIndicatorTypeface = typeface;
+  }
+  
   /**
    * Sets the colors used for styling the tab text. This will need to be called prior to calling
    * {@link #setViewPager(android.support.v4.view.ViewPager)} otherwise it will not get set
