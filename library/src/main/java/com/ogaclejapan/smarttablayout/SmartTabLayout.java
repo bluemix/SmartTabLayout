@@ -235,7 +235,7 @@ public class SmartTabLayout extends HorizontalScrollView {
    * Set the typeface of the tabs
    * @param typeface
    */
-  public void setIndicationTypeface(Typeface typeface) {
+  public void setIndicatorTypeface(Typeface typeface) {
     mIndicatorTypeface = typeface;
   }
   
